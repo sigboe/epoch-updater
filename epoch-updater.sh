@@ -49,8 +49,8 @@ if [ ${#missing_deps[@]} -gt 0 ]; then
 fi
 
 
-# Check if Wow.exe exists in current directory
-if [ ! -f "Wow.exe" ]; then
+# Check if Wow.exe exists in current directory (case-insensitive)
+if ! find . -maxdepth 1 -iname 'wow.exe' -type f -print -quit >/dev/null 2>&1; then
     zenity --error \
         --title="Project Epoch Updater" \
         --text="Wow.exe not found in current directory!\n\nPlease run this updater from your World of Warcraft directory." \
