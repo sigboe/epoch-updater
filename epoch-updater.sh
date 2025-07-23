@@ -16,7 +16,7 @@ if ! command -v zenity >/dev/null 2>&1; then
 fi
 
 # Check other required dependencies
-local missing_deps=()
+missing_deps=()
 
 if ! command -v curl >/dev/null 2>&1; then
     missing_deps+=("curl")
@@ -36,7 +36,7 @@ fi
 
 # If any dependencies are missing, show zenity error
 if [ ${#missing_deps[@]} -gt 0 ]; then
-    local deps_list=""
+    deps_list=""
     for dep in "${missing_deps[@]}"; do
         deps_list="$deps_list• $dep\n"
     done
