@@ -1,6 +1,9 @@
 # Epoch Updater
 
 A bash-based updater script for Project Epoch, a World of Warcraft custom server. The updater downloads and verifies game files by comparing MD5 hashes against a remote manifest.
+
+![Demo](demo.gif)
+
 This script was inspired by, and written with the help of [burneddi](https://github.com/brndd). It started with him explaining parts of his script to me, me contributing to his script, and later I wanted to make large structural changes compared to his script. 
 This repository does not contain any lutris installers, like burneddi's repository does.
 burneddi also made me aware of [epochcli](https://git.burkey.co/eburk/epochcli), compared to that project, this updater does not require any configuration, and this project gives you a graphical progress bar.
@@ -16,11 +19,11 @@ burneddi also made me aware of [epochcli](https://git.burkey.co/eburk/epochcli),
 ## Prerequisites
 
 The following system packages are required:
-- `curl` - For downloading manifest and files
-- `jq` - For JSON manifest parsing
-- `zenity` - For GUI dialogs and progress bars
-- `md5sum` - For file verification
-- `stat` - For file size checking
+- `curl`
+- `jq`
+- `zenity`
+
+*Note: `md5sum` and `stat` are also required but are usually pre-installed.*
 
 ## Installation
 
